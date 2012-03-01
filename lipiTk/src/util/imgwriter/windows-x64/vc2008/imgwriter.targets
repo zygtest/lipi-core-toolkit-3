@@ -1,0 +1,28 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         DefaultTargets="imgwriter"> 
+         <PropertyGroup>
+            <LipiRoot>$(LIPI_ROOT)</LipiRoot>
+         </PropertyGroup>
+<ItemGroup>
+    <StaticLibs Include="common;utils"/>
+</ItemGroup>
+<Target Name="imgwriter" 
+        DependsOnTargets="@(StaticLibs)">
+    <VCBuild Projects="$(LIPI_ROOT)\src\util\imgwriter\windows-x64\vc2008\imgwriter.vcproj"
+             Rebuild="true"
+             Configuration="Release|x64">
+    </VCBuild>
+</Target>
+<Target Name="common" >
+    <VCBuild Projects="$(LIPI_ROOT)\src\common\windows-x64\vc2008\common.vcproj"
+             Rebuild="true"
+             Configuration="Release|x64">
+    </VCBuild>
+</Target>
+<Target Name="utils" >
+    <VCBuild Projects="$(LIPI_ROOT)\src\util\lib\windows-x64\vc2008\utils.vcproj"
+             Rebuild="true"
+             Configuration="Release|x64">
+    </VCBuild>
+</Target>
+</Project>
