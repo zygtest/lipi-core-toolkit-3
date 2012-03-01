@@ -1,0 +1,12 @@
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         DefaultTargets="utils;runshaperec;runwordrec;mdv;imgwriter;logger;featurefilewriter"> 
+         <PropertyGroup>
+            <LipiRoot>$(LIPI_ROOT)</LipiRoot>
+         </PropertyGroup>
+         <Import Project="$(LIPI_ROOT)\src\util\lib\windows\vc2008\utils.targets" />
+         <Import Project="$(LIPI_ROOT)\src\util\run\windows\vc2008\run.targets" />
+         <Import Project="$(LIPI_ROOT)\src\util\mdv\windows\vc2008\mdv.targets" />
+         <Import Project="$(LIPI_ROOT)\src\util\imgwriter\windows\vc2008\imgwriter.targets" />
+         <Import Project="$(LIPI_ROOT)\src\util\logger\windows\vc2008\logger.targets" />
+         <Import Project="$(LIPI_ROOT)\src\util\featurefilewriter\windows\vc2008\featurefilewriter.targets" />
+</Project>
