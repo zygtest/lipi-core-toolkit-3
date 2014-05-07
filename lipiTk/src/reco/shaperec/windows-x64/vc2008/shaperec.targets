@@ -1,0 +1,11 @@
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         DefaultTargets="nn;pointfloat;l7;preproc;npen;activedtw;substroke;neuralnet;"> 
+         <PropertyGroup>
+            <LipiRoot>$(LIPI_ROOT)</LipiRoot>
+         </PropertyGroup>
+         <Import Project="$(LIPI_ROOT)\src\reco\shaperec\featureextractor\windows-x64\vc2008\featureextractor.targets" />
+         <Import Project="$(LIPI_ROOT)\src\reco\shaperec\nn\windows-x64\vc2008\nn.targets" />
+         <Import Project="$(LIPI_ROOT)\src\reco\shaperec\preprocessing\windows-x64\vc2008\preproc.targets" />
+         <Import Project="$(LIPI_ROOT)\src\reco\shaperec\activedtw\windows-x64\vc2008\activedtw.targets" />
+         <Import Project="$(LIPI_ROOT)\src\reco\shaperec\neuralnet\windows-x64\vc2008\neuralnet.targets" />
+</Project>

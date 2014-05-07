@@ -1,0 +1,7 @@
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         DefaultTargets="shaperectst;wordrectst;shaperectstui"> 
+         <PropertyGroup>
+            <LipiRoot>$(LIPI_ROOT)</LipiRoot>
+         </PropertyGroup>
+         <Import Project="$(LIPI_ROOT)\src\apps\samples\windows-x64\vc2008\samples.targets  " />
+</Project>

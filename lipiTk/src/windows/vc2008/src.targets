@@ -1,0 +1,11 @@
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         DefaultTargets="utils;shapereccommon;nn;pointfloat;l7;preproc;boxfld;npen;activedtw;lipiengine;runshaperec;runwordrec;mdv;imgwriter;shaperectst;wordrectst;shaperectstui;featurefilewriter;runshaperec;logger;substroke;neuralnet;">
+         
+         <PropertyGroup>
+            <LipiRoot>$(LIPI_ROOT)</LipiRoot>
+         </PropertyGroup>
+         <Import Project="$(LIPI_ROOT)\src\lipiengine\windows\vc2008\lipiengine.targets" />
+         <Import Project="$(LIPI_ROOT)\src\reco\windows\vc2008\reco.targets" />
+         <Import Project="$(LIPI_ROOT)\src\util\windows\vc2008\util.targets" />
+         <Import Project="$(LIPI_ROOT)\src\apps\windows\vc2008\apps.targets" />
+</Project>

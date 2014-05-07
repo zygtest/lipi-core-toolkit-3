@@ -1,0 +1,40 @@
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         DefaultTargets="featurefilewriter"> 
+         <PropertyGroup>
+            <LipiRoot>$(LIPI_ROOT)</LipiRoot>
+         </PropertyGroup>
+<ItemGroup>
+    <StaticLibs Include="common;utils;shapereccommon;featureextractorcommon"/>
+</ItemGroup>
+<Target Name="featurefilewriter" 
+        DependsOnTargets="@(StaticLibs)">
+    <VCBuild Projects="$(LIPI_ROOT)\src\util\featurefilewriter\windows-x64\vc2008\featurefilewriter.vcproj"
+             Rebuild="true"
+             Configuration="Release|x64">
+    </VCBuild>
+</Target>
+<Target Name="common" >
+    <VCBuild Projects="$(LIPI_ROOT)\src\common\windows-x64\vc2008\common.vcproj"
+             Rebuild="true"
+             Configuration="Release|x64">
+    </VCBuild>
+</Target>
+<Target Name="utils" >
+    <VCBuild Projects="$(LIPI_ROOT)\src\util\lib\windows-x64\vc2008\utils.vcproj"
+             Rebuild="true"
+             Configuration="Release|x64">
+    </VCBuild>
+</Target>
+<Target Name="shapereccommon" >
+    <VCBuild Projects="(LIPI_ROOT)\src\reco\shaperec\common\windows-x64\vc2008\shapereccommon.vcproj"
+             Rebuild="true"
+             Configuration="Release|x64">
+    </VCBuild>
+</Target>
+<Target Name="featureextractorcommon" >
+    <VCBuild Projects="$(LIPI_ROOT)\src\reco\shaperec\featureextractor\common\windows-x64\vc2008\featureextractorcommon.vcproj"
+             Rebuild="true"
+             Configuration="Release|x64">
+    </VCBuild>
+</Target>
+</Project>

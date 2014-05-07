@@ -1,0 +1,10 @@
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         DefaultTargets="pointfloat;l7;npen;substroke;"> 
+         <PropertyGroup>
+            <LipiRoot>$(LIPI_ROOT)</LipiRoot>
+         </PropertyGroup>
+         <Import Project="$(LIPI_ROOT)\src\reco\shaperec\featureextractor\pointfloat\windows-x64\vc2008\pointfloatDebug.targets" />
+         <Import Project="$(LIPI_ROOT)\src\reco\shaperec\featureextractor\l7\windows-x64\vc2008\l7Debug.targets" />
+         <Import Project="$(LIPI_ROOT)\src\reco\shaperec\featureextractor\npen\windows-x64\vc2008\npenDebug.targets" />
+         <Import Project="$(LIPI_ROOT)\src\reco\shaperec\featureextractor\substroke\windows-x64\vc2008\substrokeDebug.targets" />
+</Project>

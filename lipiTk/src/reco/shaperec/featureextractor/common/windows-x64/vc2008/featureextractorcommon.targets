@@ -1,0 +1,12 @@
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         DefaultTargets="featureextractorcommon">
+         <PropertyGroup>
+            <LipiRoot>$(LIPI_ROOT)</LipiRoot>
+         </PropertyGroup>         
+<Target Name="featureextractorcommon" >
+    <VCBuild Projects="$(LIPI_ROOT)\src\reco\shaperec\featureextractor\common\windows-x64\vc2008\featureextractorcommon.vcproj"
+             Rebuild="true"
+             Configuration="Release|x64">
+    </VCBuild>
+</Target>
+</Project>

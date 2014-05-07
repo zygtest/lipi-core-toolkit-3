@@ -1,0 +1,12 @@
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         DefaultTargets="lipijniinterface"> 
+         <PropertyGroup>
+            <LipiRoot>$(LIPI_ROOT)</LipiRoot>
+         </PropertyGroup>
+<Target Name="lipijniinterface">
+    <VCBuild Projects="$(LIPI_ROOT)\lipiDesigner\src\lipijniinterface\windows\vc2008\lipijniinterface.vcproj"
+             Rebuild="true"
+             Configuration="Release|win32">
+    </VCBuild>
+</Target>
+</Project>
